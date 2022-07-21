@@ -5,8 +5,8 @@ This repository contains all the assets needed for working with the Developer En
 
 ## Assets
 
-- Postman Collections
-- Lab Guides
+- (Postman Collections)[Postman Collections]
+- (Lab Guides)[Lab Guides]
 - Customer Assets
 
 
