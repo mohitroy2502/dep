@@ -1,0 +1,2345 @@
+{
+	"info": {
+		"_postman_id": "1c5822cb-062a-44e5-a3da-f715e2fbad76",
+		"name": "DEP API Lab collection",
+		"description": "Set of Postman calls for the Data Platform Workshop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16724448"
+	},
+	"item": [
+		{
+			"name": "Reference API Calls",
+			"item": [
+				{
+					"name": "Get All Tenant Schemas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.adobe.xed+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"title\": \"car\",\n                \"$id\" : \"https://data/car\",\n\n        \"extends\": \"https://data/record\",\n        \"allOf\": [\n            { \"$ref\": \"https://ns.adobe.com/xdm/common/address\" },\n    \t\t{ \"$ref\": \"https://ns.adobe.com/xdm/context/profile\" },\n            {\n                \"properties\": {\n                    \"field1\": {\n                        \"type\": \"string\"\n                    },\n                    \"field2\": {\n                        \"type\": \"integer\"\n                    }\n            }\n         }\n        ]\n}"
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"schemas"
+							]
+						},
+						"description": "\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Schema with its Descriptors",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.adobe.xed-full+json;version=1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"title\": \"car\",\n                \"$id\" : \"https://data/car\",\n\n        \"extends\": \"https://data/record\",\n        \"allOf\": [\n            { \"$ref\": \"https://ns.adobe.com/xdm/common/address\" },\n    \t\t{ \"$ref\": \"https://ns.adobe.com/xdm/context/profile\" },\n            {\n                \"properties\": {\n                    \"field1\": {\n                        \"type\": \"string\"\n                    },\n                    \"field2\": {\n                        \"type\": \"integer\"\n                    }\n            }\n         }\n        ]\n}"
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant//schemas/_dxp.schemas.110c651e4430d68b9a101000378e3d9b0488bb50cbdebba",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"",
+								"schemas",
+								"_dxp.schemas.110c651e4430d68b9a101000378e3d9b0488bb50cbdebba"
+							]
+						},
+						"description": "\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Tenant Classes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.adobe.xed+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"title\": \"car\",\n                \"$id\" : \"https://data/car\",\n\n        \"extends\": \"https://data/record\",\n        \"allOf\": [\n            { \"$ref\": \"https://ns.adobe.com/xdm/common/address\" },\n    \t\t{ \"$ref\": \"https://ns.adobe.com/xdm/context/profile\" },\n            {\n                \"properties\": {\n                    \"field1\": {\n                        \"type\": \"string\"\n                    },\n                    \"field2\": {\n                        \"type\": \"integer\"\n                    }\n            }\n         }\n        ]\n}"
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant/classes",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"classes"
+							]
+						},
+						"description": "\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All standard XDM Classes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.adobe.xed+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"title\": \"car\",\n                \"$id\" : \"https://data/car\",\n\n        \"extends\": \"https://data/record\",\n        \"allOf\": [\n            { \"$ref\": \"https://ns.adobe.com/xdm/common/address\" },\n    \t\t{ \"$ref\": \"https://ns.adobe.com/xdm/context/profile\" },\n            {\n                \"properties\": {\n                    \"field1\": {\n                        \"type\": \"string\"\n                    },\n                    \"field2\": {\n                        \"type\": \"integer\"\n                    }\n            }\n         }\n        ]\n}"
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/global/classes",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"global",
+								"classes"
+							]
+						},
+						"description": "\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Tenant Field Groups",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.adobe.xed+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"title\": \"car\",\n                \"$id\" : \"https://data/car\",\n\n        \"extends\": \"https://data/record\",\n        \"allOf\": [\n            { \"$ref\": \"https://ns.adobe.com/xdm/common/address\" },\n    \t\t{ \"$ref\": \"https://ns.adobe.com/xdm/context/profile\" },\n            {\n                \"properties\": {\n                    \"field1\": {\n                        \"type\": \"string\"\n                    },\n                    \"field2\": {\n                        \"type\": \"integer\"\n                    }\n            }\n         }\n        ]\n}"
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"mixins"
+							]
+						},
+						"description": "\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All standard XDM Field Groups",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.adobe.xed+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"title\": \"car\",\n                \"$id\" : \"https://data/car\",\n\n        \"extends\": \"https://data/record\",\n        \"allOf\": [\n            { \"$ref\": \"https://ns.adobe.com/xdm/common/address\" },\n    \t\t{ \"$ref\": \"https://ns.adobe.com/xdm/context/profile\" },\n            {\n                \"properties\": {\n                    \"field1\": {\n                        \"type\": \"string\"\n                    },\n                    \"field2\": {\n                        \"type\": \"integer\"\n                    }\n            }\n         }\n        ]\n}"
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/global/mixins",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"global",
+								"mixins"
+							]
+						},
+						"description": "\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Field Groups For One Class",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.adobe.xed+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"title\": \"car\",\n                \"$id\" : \"https://data/car\",\n\n        \"extends\": \"https://data/record\",\n        \"allOf\": [\n            { \"$ref\": \"https://ns.adobe.com/xdm/common/address\" },\n    \t\t{ \"$ref\": \"https://ns.adobe.com/xdm/context/profile\" },\n            {\n                \"properties\": {\n                    \"field1\": {\n                        \"type\": \"string\"\n                    },\n                    \"field2\": {\n                        \"type\": \"integer\"\n                    }\n            }\n         }\n        ]\n}"
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/experienceevent",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"mixins"
+							],
+							"query": [
+								{
+									"key": "property",
+									"value": "meta:intendedToExtend==https://ns.adobe.com/xdm/context/experienceevent"
+								}
+							]
+						},
+						"description": "\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Get One Field Group by Schema ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.adobe.xed+json;version=1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"title\": \"car\",\n                \"$id\" : \"https://data/car\",\n\n        \"extends\": \"https://data/record\",\n        \"allOf\": [\n            { \"$ref\": \"https://ns.adobe.com/xdm/common/address\" },\n    \t\t{ \"$ref\": \"https://ns.adobe.com/xdm/context/profile\" },\n            {\n                \"properties\": {\n                    \"field1\": {\n                        \"type\": \"string\"\n                    },\n                    \"field2\": {\n                        \"type\": \"integer\"\n                    }\n            }\n         }\n        ]\n}"
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins/_dxp.mixins.cb40c901c9128e85a5149cbbb3bfce2f57bfb53aa6a3f2f2",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"mixins",
+								"_dxp.mixins.cb40c901c9128e85a5149cbbb3bfce2f57bfb53aa6a3f2f2"
+							]
+						},
+						"description": "\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Tenant Data Types",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.adobe.xed+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"title\": \"car\",\n                \"$id\" : \"https://data/car\",\n\n        \"extends\": \"https://data/record\",\n        \"allOf\": [\n            { \"$ref\": \"https://ns.adobe.com/xdm/common/address\" },\n    \t\t{ \"$ref\": \"https://ns.adobe.com/xdm/context/profile\" },\n            {\n                \"properties\": {\n                    \"field1\": {\n                        \"type\": \"string\"\n                    },\n                    \"field2\": {\n                        \"type\": \"integer\"\n                    }\n            }\n         }\n        ]\n}"
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant/datatypes",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"datatypes"
+							]
+						},
+						"description": "\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All XDM Standard Data Types",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.adobe.xed+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"title\": \"car\",\n                \"$id\" : \"https://data/car\",\n\n        \"extends\": \"https://data/record\",\n        \"allOf\": [\n            { \"$ref\": \"https://ns.adobe.com/xdm/common/address\" },\n    \t\t{ \"$ref\": \"https://ns.adobe.com/xdm/context/profile\" },\n            {\n                \"properties\": {\n                    \"field1\": {\n                        \"type\": \"string\"\n                    },\n                    \"field2\": {\n                        \"type\": \"integer\"\n                    }\n            }\n         }\n        ]\n}"
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/global/datatypes",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"global",
+								"datatypes"
+							]
+						},
+						"description": "\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Tenant Schema Descriptors",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.adobe.xdm-full+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"@type\": \"xdm:eventRelationship\",\n  \"xdm:sourceSchema\": \"https://ns.adobe.com/xdm/context/profile__union\",\n  \"xdm:sourceVersion\": 1,\n  \"xdm:destSchema\": \"https://ns.adobe.com/xdm/context/experienceevent__union\",\n  \"xdm:destVersion\": 1\n}"
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"descriptors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Schema",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"meta:license\": [\n    \"Copyright 2022 Adobe Systems Incorporated. All rights reserved.\",\n    \"This work is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license\",\n    \"you may not use this file except in compliance with the License. You may obtain a copy\",\n    \"of the License at https://creativecommons.org/licenses/by/4.0/\"\n  ],\n  \"$id\": \"https://ns.adobe.com/ddgxdmstg/classes/test-metrics-dimensions\",\n  \"$schema\": \"http://json-schema.org/draft-06/schema#\",\n  \"title\": \"XDM Metrics Dimensions\",\n  \"type\": \"object\",\n  \"auditable\": true,\n  \"meta:extensible\": true,\n  \"meta:abstract\": true,\n  \"meta:extends\": [\n    \"https://ns.adobe.com/xdm/data/record\"\n  ],\n  \"description\": \"XDM Metrics dimensions.\",\n  \"definitions\": {\n    \"metric-dimensions\": {\n      \"properties\": {}\n    }\n  },\n  \"allOf\": [\n    {\n      \"$ref\": \"https://ns.adobe.com/xdm/data/record\"\n    },\n    {\n      \"$ref\": \"#/definitions/metric-dimensions\"\n    }\n  ],\n  \"meta:status\": \"experimental\"\n}\n"
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas/_dxp.schemas.55977c523d1fdbd5f3d376f66cea5467622afdbad9ee30ed",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"schemas",
+								"_dxp.schemas.55977c523d1fdbd5f3d376f66cea5467622afdbad9ee30ed"
+							]
+						},
+						"description": "\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Class",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"meta:license\": [\n    \"Copyright 2022 Adobe Systems Incorporated. All rights reserved.\",\n    \"This work is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license\",\n    \"you may not use this file except in compliance with the License. You may obtain a copy\",\n    \"of the License at https://creativecommons.org/licenses/by/4.0/\"\n  ],\n  \"$id\": \"https://ns.adobe.com/ddgxdmstg/classes/test-metrics-dimensions\",\n  \"$schema\": \"http://json-schema.org/draft-06/schema#\",\n  \"title\": \"XDM Metrics Dimensions\",\n  \"type\": \"object\",\n  \"auditable\": true,\n  \"meta:extensible\": true,\n  \"meta:abstract\": true,\n  \"meta:extends\": [\n    \"https://ns.adobe.com/xdm/data/record\"\n  ],\n  \"description\": \"XDM Metrics dimensions.\",\n  \"definitions\": {\n    \"metric-dimensions\": {\n      \"properties\": {}\n    }\n  },\n  \"allOf\": [\n    {\n      \"$ref\": \"https://ns.adobe.com/xdm/data/record\"\n    },\n    {\n      \"$ref\": \"#/definitions/metric-dimensions\"\n    }\n  ],\n  \"meta:status\": \"experimental\"\n}\n"
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant/classes/_dxp.schemas.55977c523d1fdbd5f3d376f66cea5467622afdbad9ee30ed",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"classes",
+								"_dxp.schemas.55977c523d1fdbd5f3d376f66cea5467622afdbad9ee30ed"
+							]
+						},
+						"description": "\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Field Group",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"meta:license\": [\n    \"Copyright 2022 Adobe Systems Incorporated. All rights reserved.\",\n    \"This work is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license\",\n    \"you may not use this file except in compliance with the License. You may obtain a copy\",\n    \"of the License at https://creativecommons.org/licenses/by/4.0/\"\n  ],\n  \"$id\": \"https://ns.adobe.com/ddgxdmstg/classes/test-metrics-dimensions\",\n  \"$schema\": \"http://json-schema.org/draft-06/schema#\",\n  \"title\": \"XDM Metrics Dimensions\",\n  \"type\": \"object\",\n  \"auditable\": true,\n  \"meta:extensible\": true,\n  \"meta:abstract\": true,\n  \"meta:extends\": [\n    \"https://ns.adobe.com/xdm/data/record\"\n  ],\n  \"description\": \"XDM Metrics dimensions.\",\n  \"definitions\": {\n    \"metric-dimensions\": {\n      \"properties\": {}\n    }\n  },\n  \"allOf\": [\n    {\n      \"$ref\": \"https://ns.adobe.com/xdm/data/record\"\n    },\n    {\n      \"$ref\": \"#/definitions/metric-dimensions\"\n    }\n  ],\n  \"meta:status\": \"experimental\"\n}\n"
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins/_dxp.schemas.55977c523d1fdbd5f3d376f66cea5467622afdbad9ee30ed",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"mixins",
+								"_dxp.schemas.55977c523d1fdbd5f3d376f66cea5467622afdbad9ee30ed"
+							]
+						},
+						"description": "\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Data type",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"meta:license\": [\n    \"Copyright 2022 Adobe Systems Incorporated. All rights reserved.\",\n    \"This work is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license\",\n    \"you may not use this file except in compliance with the License. You may obtain a copy\",\n    \"of the License at https://creativecommons.org/licenses/by/4.0/\"\n  ],\n  \"$id\": \"https://ns.adobe.com/ddgxdmstg/classes/test-metrics-dimensions\",\n  \"$schema\": \"http://json-schema.org/draft-06/schema#\",\n  \"title\": \"XDM Metrics Dimensions\",\n  \"type\": \"object\",\n  \"auditable\": true,\n  \"meta:extensible\": true,\n  \"meta:abstract\": true,\n  \"meta:extends\": [\n    \"https://ns.adobe.com/xdm/data/record\"\n  ],\n  \"description\": \"XDM Metrics dimensions.\",\n  \"definitions\": {\n    \"metric-dimensions\": {\n      \"properties\": {}\n    }\n  },\n  \"allOf\": [\n    {\n      \"$ref\": \"https://ns.adobe.com/xdm/data/record\"\n    },\n    {\n      \"$ref\": \"#/definitions/metric-dimensions\"\n    }\n  ],\n  \"meta:status\": \"experimental\"\n}\n"
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant/datatypes/_dxp.schemas.55977c523d1fdbd5f3d376f66cea5467622afdbad9ee30ed",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"datatypes",
+								"_dxp.schemas.55977c523d1fdbd5f3d376f66cea5467622afdbad9ee30ed"
+							]
+						},
+						"description": "\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Descriptor",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"meta:license\": [\n    \"Copyright 2022 Adobe Systems Incorporated. All rights reserved.\",\n    \"This work is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license\",\n    \"you may not use this file except in compliance with the License. You may obtain a copy\",\n    \"of the License at https://creativecommons.org/licenses/by/4.0/\"\n  ],\n  \"$id\": \"https://ns.adobe.com/ddgxdmstg/classes/test-metrics-dimensions\",\n  \"$schema\": \"http://json-schema.org/draft-06/schema#\",\n  \"title\": \"XDM Metrics Dimensions\",\n  \"type\": \"object\",\n  \"auditable\": true,\n  \"meta:extensible\": true,\n  \"meta:abstract\": true,\n  \"meta:extends\": [\n    \"https://ns.adobe.com/xdm/data/record\"\n  ],\n  \"description\": \"XDM Metrics dimensions.\",\n  \"definitions\": {\n    \"metric-dimensions\": {\n      \"properties\": {}\n    }\n  },\n  \"allOf\": [\n    {\n      \"$ref\": \"https://ns.adobe.com/xdm/data/record\"\n    },\n    {\n      \"$ref\": \"#/definitions/metric-dimensions\"\n    }\n  ],\n  \"meta:status\": \"experimental\"\n}\n"
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors/dd636544ff02b0b28c4495e51085b3d4221b61eae97e5df6",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"descriptors",
+								"dd636544ff02b0b28c4495e51085b3d4221b61eae97e5df6"
+							]
+						},
+						"description": "\t"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DEP XDM API Lab",
+			"item": [
+				{
+					"name": "Step 1 - Get XDM Standard Field Groups",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.adobe.xed-id+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/global/mixins",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"global",
+								"mixins"
+							]
+						},
+						"description": "\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Step 2 - Get Experience Event Class",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.adobe.xed-id+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/global/classes",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"global",
+								"classes"
+							]
+						},
+						"description": "\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Step 3 - Create Orders Schema",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"allOf\": [\n        {\n            \"$ref\": \"https://ns.adobe.com/xdm/context/experienceevent\"\n        },\n        {\n            \"$ref\": \"https://ns.adobe.com/xdm/context/experienceevent-order-details\"\n        }\n    ],\n\"title\": \"Orders\",\n\"description\": \"Orders\"\n}\n"
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"schemas"
+							]
+						},
+						"description": "\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Step 4 - Get Orders Schema",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.adobe.xed-full+json;version=1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas/_dxp.schemas.4f2faf3f2e282f7c56eb6c14716849b016b6334a7fc5aa67",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"schemas",
+								"_dxp.schemas.4f2faf3f2e282f7c56eb6c14716849b016b6334a7fc5aa67"
+							]
+						},
+						"description": "\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Step 5.1 - Create Primary Identity for Orders Schema",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"@type\": \"xdm:descriptorIdentity\",\n  \"xdm:sourceSchema\": \"https://ns.adobe.com/dxp/schemas/4f2faf3f2e282f7c56eb6c14716849b016b6334a7fc5aa67\",\n  \"xdm:sourceVersion\": 1,\n  \"xdm:sourceProperty\": \"/_dxp/personalEmail\",\n  \"xdm:namespace\": \"Email\",\n  \"xdm:property\": \"xdm:code\",\n  \"xdm:isPrimary\": true\n}"
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"descriptors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 5.2 - Create CustomerID Identity for Orders Schema",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"@type\": \"xdm:descriptorIdentity\",\n  \"xdm:sourceSchema\": \"https://ns.adobe.com/dxp/schemas/4f2faf3f2e282f7c56eb6c14716849b016b6334a7fc5aa67\",\n  \"xdm:sourceVersion\": 1,\n  \"xdm:sourceProperty\": \"/_dxp/customerID\",\n  \"xdm:namespace\": \"CustomerID\",\n  \"xdm:property\": \"xdm:code\",\n  \"xdm:isPrimary\": false\n}\n\n"
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"descriptors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 6 - Get Order Schema and its descriptors",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.adobe.xed-desc+json;version=1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant//schemas/_dxp.schemas.4f2faf3f2e282f7c56eb6c14716849b016b6334a7fc5aa67",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"",
+								"schemas",
+								"_dxp.schemas.4f2faf3f2e282f7c56eb6c14716849b016b6334a7fc5aa67"
+							]
+						},
+						"description": "\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Step 7 - Get Lookup Schemas",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.adobe.xed+json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"schemas"
+							],
+							"query": [
+								{
+									"key": "connectorId",
+									"value": "{{connectorId}}",
+									"disabled": true
+								},
+								{
+									"key": "connectionId",
+									"value": "{{connectionId}}",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "{{name}}",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "{{description}}",
+									"disabled": true
+								},
+								{
+									"key": "enableErrorDiagnostics",
+									"value": "{{enableErrorDiagnostics}}",
+									"disabled": true
+								},
+								{
+									"key": "state",
+									"value": "{{state}}",
+									"disabled": true
+								},
+								{
+									"key": "namespace",
+									"value": "{{namespace}}",
+									"disabled": true
+								}
+							]
+						},
+						"description": "\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Step 8 - Relationship Descriptor Orders To Store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"@type\": \"xdm:descriptorOneToOne\",\n  \"xdm:sourceSchema\": \"https://ns.adobe.com/dxp/schemas/4f2faf3f2e282f7c56eb6c14716849b016b6334a7fc5aa67\",\n  \"xdm:sourceVersion\": 1,\n  \"xdm:sourceProperty\": \"/store/storeID\",\n  \"xdm:destinationSchema\": \"https://ns.adobe.com/dxp/schemas/120be72e3098652e024540cf4b3dd140f8d0c3956037517b\",\n  \"xdm:destinationVersion\": 1\n}\n\n"
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"descriptors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 9 - Relationship Descriptor Orders To Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"@type\": \"xdm:descriptorOneToOne\",\n  \"xdm:sourceSchema\": \"https://ns.adobe.com/dxp/schemas/4f2faf3f2e282f7c56eb6c14716849b016b6334a7fc5aa67\",\n  \"xdm:sourceVersion\": 1,\n  \"xdm:sourceProperty\": \"/productListItems[*]/SKU\",\n  \"xdm:destinationSchema\": \"https://ns.adobe.com/dxp/schemas/d350608adecddfbc7216bcab32f7702e3d88d7a35948ba0a\",\n  \"xdm:destinationVersion\": 1\n}\n\n"
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"descriptors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 10 - Relationship Descriptor Orders To Plan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"@type\": \"xdm:descriptorOneToOne\",\n  \"xdm:sourceSchema\": \"https://ns.adobe.com/dxp/schemas/110c651e4430d68b9a101000378e3d9b0488bb50cbdebba\",\n  \"xdm:sourceVersion\": 1,\n  \"xdm:sourceProperty\": \"/order/_dxp/plan/planID\",\n  \"xdm:destinationSchema\": \"https://ns.adobe.com/dxp/schemas/17a76a0ad31add7bbf7c6afc651c75b01add14d0cdd332e8\",\n  \"xdm:destinationVersion\": 1,\n  \"xdm:destinationProperty\": \"/planID\"\n}"
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"descriptors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 11 - Get Order Schema and its descriptors",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.adobe.xed-desc+json;version=1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant//schemas/_dxp.schemas.4f2faf3f2e282f7c56eb6c14716849b016b6334a7fc5aa67",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"",
+								"schemas",
+								"_dxp.schemas.4f2faf3f2e282f7c56eb6c14716849b016b6334a7fc5aa67"
+							]
+						},
+						"description": "\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Step 12 - Reference Descriptor for Store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"@type\": \"xdm:descriptorReferenceIdentity\",\n  \"xdm:sourceSchema\": \"https://ns.adobe.com/dxp/schemas/4f2faf3f2e282f7c56eb6c14716849b016b6334a7fc5aa67\",\n  \"xdm:sourceVersion\": 1,\n  \"xdm:sourceProperty\": \"/store/storeID\",\n  \"xdm:identityNamespace\": \"storeID\"\n}\n\n"
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"descriptors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 13 - Reference Descriptor for Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"@type\": \"xdm:descriptorReferenceIdentity\",\n  \"xdm:sourceSchema\": \"https://ns.adobe.com/dxp/schemas/2055da8b29eca1774fc78cd04f905c41345e2b435440a7c1\",\n  \"xdm:sourceVersion\": 1,\n  \"xdm:sourceProperty\": \"/productListItems[*]/SKU\",\n  \"xdm:identityNamespace\": \"productID\"\n}"
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"descriptors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 14 - Reference Descriptor for Plan",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"@type\": \"xdm:descriptorReferenceIdentity\",\n  \"xdm:sourceSchema\": \"https://ns.adobe.com/dxp/schemas/6fb36d0cb830cbdf6a69a89aec5ab7c1705173bafc10656f\",\n  \"xdm:sourceVersion\": 1,\n  \"xdm:sourceProperty\": \"/order/_dxp/plan/planID\",\n  \"xdm:identityNamespace\": \"planID\"\n}"
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"descriptors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 15 - Get Order Schema and its descriptors",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/vnd.adobe.xed-desc+json;version=1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant//schemas/_dxp.schemas.a9819ab39de815b88b02eaa9b5e551fefc95d6f1aa4e01d8",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"",
+								"schemas",
+								"_dxp.schemas.a9819ab39de815b88b02eaa9b5e551fefc95d6f1aa4e01d8"
+							]
+						},
+						"description": "\t"
+					},
+					"response": []
+				},
+				{
+					"name": "Step 16 - Extend the Event Types",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"@type\": \"xdm:alternateDisplayInfo\",\n  \"xdm:sourceSchema\": \"https://ns.adobe.com/dxp/schemas/110c651e4430d68b9a101000378e3d9b0488bb50cbdebba\",\n  \"xdm:sourceVersion\": 1,\n  \"xdm:sourceProperty\": \"/eventType\",\n  \"xdm:title\": {\n    \"en_us\": \"Event Type\"\n  },\n  \"xdm:description\": {\n    \"en_us\": \"The type of experience event detected by the system.\"\n  },\n  \"meta:enum\": {\n    \"orders.placed\": \"Order Placed\",\n    \"orders.cancelled\": \"Order Cancelled\",\n    \"orders.readyForPickup\": \"Order Ready For Pickup\",\n    \"orders.pickedUp\": \"Order Picked Up\",\n    \"orders.shipped\": \"Order Shipped\",\n    \"orders.delivered\": \"Order Delivered\"\n  }\n}\n\n"
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"foundation",
+								"schemaregistry",
+								"tenant",
+								"descriptors"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pipeline API Lab",
+			"item": [
+				{
+					"name": "Order Event",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"header\": {\n        \"flowId\": \"08282acd-a9ab-43c8-983e-fe03180e36e3\",\n        \"imsOrgId\": \"37E0399C61687C4E0A495E06@AdobeOrg\",\n        \"datasetId\": \"62f2ebab1975a21c0dabc6a2\"\n    },\n\"body\": {\n        \"orderStatus\": \"cancelled\",\n        \"lastOrderStatusUpdate\": \"2022-08-09T19:45:02Z\",\n        \"customerID\": \"20220809194501\",\n        \"personalEmail\": \"keshav@adobe.com\",\n        \"orderID\": \"f82af383-cc27-427b-a97e-4ed4340d3e9a-aug-09-2022-19-45-02\",\n        \"orderDate\": \"2022-06-07T10:05:30Z\",\n        \"orderTotal\": 291.02,\n        \"paymentType\": \"credit\",\n        \"paymentAmount\": 349.35,\n        \"paymentCurrencyCode\": \"USD\",\n        \"paymentTransactionID\": \"24596662-1a9b-4fc1-a98f-b5ca687c523f\",\n        \"storeID\": \"STORE-35\",\n        \"shippingStreetAddress\": \"30133 Golf Parkway\",\n        \"shippingCity\": \"Fullerton\",\n        \"shippingState\": \"California\",\n        \"shippingZip\": \"92640\",\n        \"shippingMethod\": \"Standard\",\n        \"shippingAmount\": 0,\n        \"shippingDestination\": \"store\",\n        \"billingStreetAddress\": \"497 Kensington Drive\",\n        \"billingCity\": \"Glinojeck\",\n        \"billingZip\": \"06-450\",\n        \"plan\": {\n            \"ID\": \"m3\"\n        },\n        \"Products\": [\n            {\n                \"productID\": \"PRODUCT-6\",\n                \"quantity\": 1,\n                \"price\": 150.23,\n                \"currencyCode\": \"USD\",\n                \"model\": \"v2\",\n                \"make\": \"Google\"\n            },\n            {\n                \"productID\": \"PRODUCT-11\",\n                \"quantity\": 1,\n                \"price\": 150.23,\n                \"currencyCode\": \"USD\",\n                \"model\": \"v1\",\n                \"make\": \"Google\"\n            }\n        ]\n    }\n}"
+						},
+						"url": {
+							"raw": "https://dcs.adobedc.net/collection/3f17ad021bbfe57dde62a94933660d7e64bd40b2b1335bac42ba4d396ac04fb6",
+							"protocol": "https",
+							"host": [
+								"dcs",
+								"adobedc",
+								"net"
+							],
+							"path": [
+								"collection",
+								"3f17ad021bbfe57dde62a94933660d7e64bd40b2b1335bac42ba4d396ac04fb6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Segment API Lab",
+			"item": [
+				{
+					"name": "Segment Job",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{ACCESS_TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{API_KEY}}",
+								"type": "text"
+							},
+							{
+								"key": "x-gw-ims-org-id",
+								"value": "{{IMS_ORG}}",
+								"type": "text"
+							},
+							{
+								"key": "x-sandbox-name",
+								"value": "{{SANDBOX_NAME}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n{\n\"segmentId\": \"7863c010-e092-41c8-ae5e-9e533186752e\"\n}\n]"
+						},
+						"url": {
+							"raw": "https://platform.adobe.io/data/core/ups/segment/jobs",
+							"protocol": "https",
+							"host": [
+								"platform",
+								"adobe",
+								"io"
+							],
+							"path": [
+								"data",
+								"core",
+								"ups",
+								"segment",
+								"jobs"
+							]
+						},
+						"description": "\t"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "IMS",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "IMSOrg",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
