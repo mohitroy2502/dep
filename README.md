@@ -9,5 +9,5 @@ This repository contains all the assets needed when taking the Experience Platfo
 - Lab Guides
     - Broken down by the day, this folder contains the material necessary to perform the labs
 - Scenario Assets
-    - Reference material to assist you during the course. Contains relevant information around the customer Connection 5G
+    - Reference material to assist you during the bootcamp. Contains relevant information about the customer, Connection 5G, and their infrastruture, data systems and proposed architecture for implementation
 
